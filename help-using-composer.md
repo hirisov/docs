@@ -74,6 +74,12 @@ composer create-project wintercms/winter <your installation directory> "<version
 #   composer create-project wintercms/winter mywinter "1.0.474"
 ```
 
+If you get an error regarding the "https://repo.packagist.org/packages.json" file could not be downloaded then maybe you have an IPv6 related network issue, and disabling IPv6 might help. Under Linux you can do it with the following command (as root user):
+
+```bash
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+```
+
 <a name="installing-plugin-theme"></a>
 ## Installing a plugin or theme using Composer
 
