@@ -157,6 +157,29 @@ class Plugin extends PluginBase
 }
 ```
 
+This example will add a new belongsTo relation ("company") and a new belongsToMany relation ("children") to the User model:
+
+```php
+class Plugin extends PluginBase
+{
+    [...]
+
+    public function boot()
+    {
+        UserModel::extend(function ($model) {
+
+            $model->addBelongsToRelation('company', ['Acme\Plugin\Models\Company', 'key' => 'my_company_id']);
+
+            $model->addBelongsToManyRelation('children', [
+                'Acme\Plugin\Models\Child',
+                'table' => 'acme_plugin_users_children',
+            ]);
+
+        });
+    }
+}
+```
+
 <a name="extending-backend-form"></a>
 ### Extending backend forms
 
