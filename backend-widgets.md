@@ -410,7 +410,7 @@ Inside report widgets you can use any [charts or indicators](../ui/form), lists 
 </div>
 ```
 
-> **NOTE:** Report widgets are loaded through an AJAX request on accessing the page - they are not available immediately on the page. This means that inline `<script>` tags will not work. See [Updating partials](../ajax/update-partials#javascript-in-partials) for more information on handling JavaScript in partials after an AJAX request.
+> **NOTE:** Report widgets are loaded through an AJAX request on accessing the page - they are not available immediately on the page. This means that inline `<script>` tags will not work. See [Updating partials](../ajax/update-partials#javascript-in-partials) for more information on handling JavaScript in partials after an AJAX request. Please note that the backend widgets use jQuery internally, so you should use the jQuery example code described in that page.
 
 <a name="report-properties"></a>
 ### Report widget properties
